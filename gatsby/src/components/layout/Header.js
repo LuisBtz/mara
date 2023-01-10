@@ -43,7 +43,7 @@ display: flex;
 justify-content: space-between;
 position: relative;
 align-items: center;
-z-index: 1;
+z-index: 2;
 @media (max-width: 890px) {
     padding: 56px 20px;
 }
@@ -120,6 +120,7 @@ button.ham {
             height: 100vh;
             background-color: rgba(255, 255, 255, 0.9);
             top: 0;
+            z-index: 1;
             right: -100%;
             display: flex;
             flex-direction: column;

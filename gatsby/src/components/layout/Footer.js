@@ -9,7 +9,7 @@ const Footer = () => {
                     Follow Me: <a target='_blank' rel="noreferrer" href='https://www.instagram.com/mo.ma.94/'>@MO.MA.DESIGN</a>
                 </li>
                 <li>
-                    Mail Me: <a href='mailto:maraosman94@hotmail.com'>maraosman94@hotmail.com</a>
+                    Mail Me: <a href='mailto:hola@maraosman.com'>hola@maraosman.com</a>
                 </li>
                 <li>
                     © MARA OSMAN 2022

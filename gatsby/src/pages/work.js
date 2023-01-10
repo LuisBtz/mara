@@ -77,6 +77,7 @@ const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
+  z-index: 1;
   @media (max-width: 890px) {
     padding: 50px 20px 0 20px;
   }
