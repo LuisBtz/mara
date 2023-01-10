@@ -9,16 +9,26 @@ const Container = styled.section`
   position: relative;
   margin-bottom: 50px;
   @media (max-width: 890px) {
-    padding: 50px 20px 0 20px;
+    padding: 0px 20px 0 20px;
   }
 
 h2 {
-  font-size: 46px;
+  font-size: 2.8vw;
   font-family: var(--regular);
-  width: 80%;
+  width: 84%;
   margin: 0 auto;
   line-height: 1.5;
   letter-spacing: 3px;
+  @media (max-width: 920px) {
+    width: 90%;
+    line-height: 2.5;
+  }
+  @media (max-width: 890px) {
+      font-size: 2rem;
+      width: 95%;
+      text-align: center;
+  }
+
   span {
     border: solid 3px black;
     padding: 1px 10px;
@@ -50,13 +60,7 @@ h2 {
     width: 80px;
   }
 
-  @media (max-width: 890px) {
-      font-size: 5rem;
-  }
 
-  @media (max-width: 448px) {
-      font-size: 3.5rem;
-  }
 
   .hello {
     cursor: pointer;
@@ -69,31 +73,39 @@ h2 {
 
 }
 .moma {
-  .mara {
-    position: absolute;
-    right: 100px;
-    bottom: 170px;
-    width: 30vw;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 890px) {
+    grid-template-columns: repeat(2, 1fr);
+
   }
-  .theDesigner {
-    width: 275px;
-    text-align: center;
-    border: solid 3px black;
-    border-radius: 20px;
-    padding: 20px;
-    box-sizing: content-box;
-    position: relative;
-    bottom: 30px;
-    p {
-      font-size: 1.5vw;
-    }
+  .image {
+    width: 50%;
+    align-self: center;
+    justify-self: center  ;
   }
 }
 .images {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
   .image1 {
     position: absolute;
     bottom: 50px;
-    right: 0px;
+    right: 50px;
     transform: translateX(-50%);
     width: 15%;
   }
@@ -101,44 +113,45 @@ h2 {
     position: absolute;
     bottom: 50px;
     left: 50px;
-    width: 10%;
+    width: 20%;
   }
   .image3 {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 50px;
-    width: 22%;
+    top: 50px;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 14%;
   }
   .image4 {
     position: absolute;
-    bottom: -50px;
-    right: 350px;
-    width: 27%;
+    top: 150px;
+    right: 100px;
+    width: 30%;
   }
   .image5 {
     position: absolute;
-    bottom: -50px;
-    right: 350px;
+    bottom: 50px;
+    left: 20%;
     width: 27%;
   }
   .image6 {
     position: absolute;
-    bottom: -50px;
-    right: 350px;
-    width: 27%;
+    top: 50px;
+    left: 50px;
+    width: 13%;
   }
   .image7 {
     position: absolute;
-    bottom: -50px;
-    right: 350px;
-    width: 27%;
+    bottom: 30%;
+    right: 20%;
+    width: 15%;
+    z-index: 1;
   }
   .image8 {
     position: absolute;
-    bottom: -50px;
-    right: 350px;
-    width: 27%;
+    bottom: 10%;
+    right: 30%;
+    width: 12%;
   }
 }
 
@@ -155,7 +168,7 @@ const InfoPage = () => {
   return (
     <Layout pageTitle="Home Page">
       <Container>
-        <h2>I'm Mara<img className="mara" src="/mara.png" alt='mata icon' />, a <span>digital designer</span> based in Monterrey, Mexico<button onMouseEnter={() => setImages(true)} onMouseLeave={() => setImages(false)} className='cerro'><img className="monterrey" src="/monterrey.png" alt='monterrey icon' /></button> “The city of mountains”. Mostly interested with playing with<img className="computer" src="/compu.png" alt='computer icon' />digital and <img className="letra" src="/letra.png" alt='Letra icon' /> type design as my main forms of expression, currently exploring new ways to play with technology. I have a dog named Totopo, <img className="toto" src="/toto.png" alt='toto icon' /> he looks like a Mini Chewbacca .</h2>
+        <h2>I'm Mara<img className="mara" src="/mara.png" alt='mata icon' />, a <span>digital designer</span> based in Monterrey, Mexico<button onMouseEnter={() => setImages(true)} onMouseLeave={() => setImages(false)} className='cerro'><img className="monterrey" src="/monterrey.png" alt='monterrey icon' /></button> “The city of mountains”. Mostly interested with playing with<img className="computer" src="/compu.png" alt='computer icon' />digital and <img className="letra" src="/letra.png" alt='Letra icon' /> type design as my main forms of expression, currently exploring new ways to play with technology. I have a dog named Totopo, <button onMouseEnter={() => setMoma(true)} onMouseLeave={() => setMoma(false)} ><img className="toto" src="/toto.png" alt='toto icon' /></button>he looks like a Mini Chewbacca .</h2>
         {images ? 
         <div className='images'>
           <div className='image1'>
@@ -189,16 +202,53 @@ const InfoPage = () => {
       {
         moma ?
           <div className="moma">
-            <div className="mara">
+            <div className="image">
               <StaticImage
-                  src="../assets/images/moma.png"
-                  alt="Mara Osman"
+                  src="../assets/images/toto1.png"
+                  alt="Toto 1"
                   placeholder="blurred"
                   layout="fullWidth"
               />
             </div>
-            <div className="theDesigner">
-              <p>* The designer named Mara Osman, not to be confused with the museum.</p>
+            <div className="image">
+              <StaticImage
+                  src="../assets/images/toto2.png"
+                  alt="Toto 1"
+                  placeholder="blurred"
+                  layout="fullWidth"
+              />
+            </div>
+            <div className="image">
+              <StaticImage
+                  src="../assets/images/toto3.png"
+                  alt="Toto 1"
+                  placeholder="blurred"
+                  layout="fullWidth"
+              />
+            </div>
+            <div className="image">
+              <StaticImage
+                  src="../assets/images/toto4.png"
+                  alt="Toto 1"
+                  placeholder="blurred"
+                  layout="fullWidth"
+              />
+            </div>
+            <div className="image">
+              <StaticImage
+                  src="../assets/images/toto5.png"
+                  alt="Toto 1"
+                  placeholder="blurred"
+                  layout="fullWidth"
+              />
+            </div>
+            <div className="image">
+              <StaticImage
+                  src="../assets/images/toto6.png"
+                  alt="Toto 1"
+                  placeholder="blurred"
+                  layout="fullWidth"
+              />
             </div>
           </div>
           :

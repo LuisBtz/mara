@@ -80,6 +80,8 @@ const Container = styled.section`
   z-index: 1;
   @media (max-width: 890px) {
     padding: 50px 20px 0 20px;
+    grid-template-columns: 1fr;
+
   }
   article {
     height: auto;
@@ -90,7 +92,6 @@ const Container = styled.section`
       width: auto;
       height: 100%;
       display: block;
-      background-color: pink;
     }
     .image1 {
         width: 100%;
