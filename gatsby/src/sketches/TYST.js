@@ -32,10 +32,10 @@ const s = (p) => {
       p.stroke("#FFFFFF")
       p.strokeWeight(4)
     
-      p.drawingContex (setLineDash([5,15]))
-      p.drawingContext (lineDashOffset = dashOffset)
+      p.drawingContext (setLineDash([5,15]))
+      p.drawingContext (lineDashOffset = dashOffset )
       dashOffset = dashOffset + .15;
-      
+
       p.text("Thank You Space Type",p.width/ 2 - 5,y-5)
     
     }
