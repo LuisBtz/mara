@@ -5,43 +5,38 @@ const s = (p) => {
 
     let TS = 100;
     
-    let myFont;
-    p.preload = function () {
-      myFont = loadFont('BCBaseliner-CondensedHigh.otf');
-    }
     
     p.setup = function() {
-      createCanvas(height=750, width=750);
+      p.createCanvas(750, 750);
     }
     
     p.draw = function()  {
       p.background("#04110B33");
       
-      for (let y = 100; y<= 604; y = y + mouseY + 30)
+      for (let y = 100; y<= 604; y = y + p.mouseY + 30)
     
-      {p.drawEnter(y)}
+      {drawEnter(y)}
     }
       
-    p.drawEnter(y) = function() {
-      p.textFont(myFont)
+    function drawEnter(y) {
       p.textSize (TS)
       p.fill("#37f79b")
-      p.textAlign(CENTER, CENTER);
+      p.textAlign(p.CENTER, p.CENTER);
     
     //DRAW THE SHADOW
       p.noStroke()
-      p.text("Thank You Space Type",width / 2,y)
+      p.text("Thank You Space Type",p.width / 2,p.y)
     
     //DRAW MAIN THEME
       p.fill("#04110B")
       p.stroke("#FFFFFF")
       p.strokeWeight(4)
     
-      drawingContext .setLineDash([5,15])
-      drawingContext .lineDashOffset = dashOffset 
-      dashOffset = dashOffset + .15
+      p.drawingContex (setLineDash([5,15]))
+      p.drawingContext (lineDashOffset = dashOffset)
+      dashOffset = dashOffset + .15;
       
-      p.text("Thank You Space Type",width/ 2 - 5,y-5)
+      p.text("Thank You Space Type",p.width/ 2 - 5,y-5)
     
     }
   };
