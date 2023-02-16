@@ -2,12 +2,7 @@ import p5 from 'p5';
 
 const s = (p) => {
   let myNumber = 10;
-  let myFont;
 
-  p.preload = function()  {
-  myFont = p.loadFont('./OhnoSoftieDemo-Black.otf');
-  }
-  
   p.setup = function() {
     p.createCanvas(750,750);
   };
@@ -16,7 +11,6 @@ const s = (p) => {
     p.background("#00000033");
     
     p.textSize(150);
-    p.textFont(myFont)
     p.textAlign(p.CENTER,p.CENTER);
      myNumber = p.random(0,255)
      p.fill(myNumber, myNumber, myNumber);

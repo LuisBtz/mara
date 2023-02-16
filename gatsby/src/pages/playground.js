@@ -3,6 +3,7 @@ import Layout from '../components/layout/layout'
 import { Seo } from "../components/layout/seo";
 import styled from 'styled-components'
 import HEAD from "../sketches/HEAD.js";
+import TYST from "../sketches/TYST.js";
 
 
 const Container = styled.section`
@@ -48,13 +49,19 @@ p.scroll {
   padding: 50px 20px 0 20px;
 }
 
+s1 {
+position: absolute;
+margin-left: 1000px;
+margin-top: 2008px;
+}
 
 
 `
 
 const PlaygroundPage = () => {
 
-const sketchRef = useRef(HEAD);
+const sketchHead = useRef(HEAD);
+const sketchTYST = useRef(TYST);
 
 
   return (
@@ -71,7 +78,11 @@ const sketchRef = useRef(HEAD);
           I've always been curious about programming and what better way to start exploring this than combining it with my passion for type. 
           This exercise where made during this workshop, and I'm currently enrolled in the Intro to Generative Type class in Type Electives!</p>
 
-          <div className="sketch" ref={{sketchRef}}></div>
+        <s1> <div className="sketch" ref={{sketchHead}}></div> </s1>
+        <s1> <div className="sketch" ref={{sketchTYST}}></div> </s1>
+
+
+
       </Container>
 
   
