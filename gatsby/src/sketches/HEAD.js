@@ -5,7 +5,7 @@ const s = (p) => {
   let myFont;
 
   p.preload = function()  {
-  myFont = p.loadFont('..OhnoSoftieDemo-Black.otf');
+  myFont = p.loadFont('../sketches/OhnoSoftieDemo-Black.otf');
   }
   
   p.setup = function() {
@@ -26,7 +26,6 @@ const s = (p) => {
     p.rotate(p.frameCount * 0.15);
     p.text("head",0,0);
     
-    console.log(p.frameCount)
     }
   };
 
