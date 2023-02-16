@@ -71,9 +71,10 @@ const sketchRef = useRef(HEAD);
           I've always been curious about programming and what better way to start exploring this than combining it with my passion for type. 
           This exercise where made during this workshop, and I'm currently enrolled in the Intro to Generative Type class in Type Electives!</p>
 
+          <div className="sketch" ref={{sketchRef}}></div>
       </Container>
 
-      <div className="media" ref={{sketchRef}}></div>
+  
       
       
     
