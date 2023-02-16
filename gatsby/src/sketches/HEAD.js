@@ -3,15 +3,16 @@ import p5 from 'p5';
 const s = (p) => {
   let myNumber = 10;
   let myFont;
-  function preload() {
+
+  p.preload = function()  {
     p.myFont = p.loadFont('OhnoSoftieDemo-Black.otf');
   }
   
-  function setup() {
-    p.createCanvas(p.height=750,p.width=750);
-  }
+  p.setup = function() {
+    p.createCanvas(750,750);
+  };
   
-  function draw() {
+   p.draw = function()  {
     p.background("#00000033");
     
     p.textSize(150);

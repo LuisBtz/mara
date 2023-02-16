@@ -2,10 +2,7 @@ import React, {useRef} from "react";
 import Layout from '../components/layout/layout'
 import { Seo } from "../components/layout/seo";
 import styled from 'styled-components'
-import p5 from "p5";
-import sketch from "/Users/maraosman/M_OSMAN/mara/gatsby/src/sketches/HEAD.js";
-const sketchRef = useRef(sketch);
-<div className="p5-js" ref={{sketchRef}}></div>
+import HEAD from "../sketches/HEAD.js";
 
 
 const Container = styled.section`
@@ -34,7 +31,8 @@ p {
   margin-top: 30px;
   font-size: 28px;
   text-align: center;
-  margin-sides: 400px;
+  margin-left: 200px;
+  margin-right: 200px;
   
 }
 
@@ -50,15 +48,13 @@ p.scroll {
   padding: 50px 20px 0 20px;
 }
 
-iframe {
-  width=750px;
-  height=750px;
-}
 
 
 `
 
 const PlaygroundPage = () => {
+
+const sketchRef = useRef(HEAD);
 
 
   return (
@@ -77,6 +73,7 @@ const PlaygroundPage = () => {
 
       </Container>
 
+      <div className="media" ref={{sketchRef}}></div>
       
       
     
