@@ -5,7 +5,7 @@ const s = (p) => {
   let myFont;
 
   p.preload = function()  {
-  myFont = p.loadFont('../sketches/OhnoSoftieDemo-Black.otf');
+  myFont = p.loadFont('./OhnoSoftieDemo-Black.otf');
   }
   
   p.setup = function() {
